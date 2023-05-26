@@ -27,16 +27,16 @@
 - Change Password
 - Forcefully Log out
 - Admin can manage multiple process:
-> Art Gallery Events
-> Offered Arts
-> Manage Art Gallery
-> Manage Artists
-> Manage Users
-> Building
-> Room
+> Art Gallery Events,
+> Offered Arts,
+> Manage Art Gallery,
 > Payment
-> Permissions
-> Activity
+> Manage Artists,
+> Manage Users,
+> Permissions,
+> Building,
+> Room,
+> Activity.
 
 #### Artist Functionalities:
 - Artist can log in and log out
