@@ -1,6 +1,6 @@
 # Project:- Virtual Art Gallery
 
-> I am building a <i>Virtual Art Gallery</i> management system. Where people can explore, view and buy various artworks. Users can register, log in, and upload their own artwork or browse and appreciate artworks uploaded by other users. The gallery should provide features like searching, filtering, favoring, and commenting on artworks. Additionally, implement a rating system for users to rate and provide feedback on the artworks. There are three types of User such as Admin , Artist, User.
+> I am building a <i>Virtual Art Gallery</i> management system. Where people can explore, view and buy various artworks. Users can register, log in, and upload their own artwork or browse and appreciate artworks uploaded by other users. The gallery should provide features like searching, filtering, rating, favoring, and commenting on artworks. There are three types of User such as Admin , Artist, User.
 
 ## Authentication service
 
@@ -27,16 +27,16 @@
 - Change Password
 - Forcefully Log out
 - Admin can manage multiple process:
-        * Art Gallery Events
-        * Offered Arts
-        * Manage Art Gallery
-        * Manage Artists
-        * Manage Users
-        * Building
-        * Room
-        * Payment
-        * Permissions
-        * Activity
+> Art Gallery Events
+> Offered Arts
+> Manage Art Gallery
+> Manage Artists
+> Manage Users
+> Building
+> Room
+> Payment
+> Permissions
+> Activity
 
 #### Artist Functionalities:
 - Artist can log in and log out
