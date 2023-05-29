@@ -7,9 +7,9 @@ export type TUser = {
     role: string;
 };
 
-export interface IUserMethods {
-    generateDefaultPassword: () => string;
-    generateUserId: () => string;
-}
+// export interface IUserMethods {
+//     generateDefaultPassword: () => string;
+//     generateUserId: () => string;
+// }
 
-export type UserModel = Model<TUser, {}, IUserMethods>;
+// export type UserModel = Model<TUser, {}, IUserMethods>;
