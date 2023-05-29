@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
 dotenv.config();
-const URL = process.env.MONGODB_CONNECTION_URL || '';
+const URL = process.env.MONGODB_CONNECTION_URL as string;
 
 mongoose.set("strictQuery", true);
 

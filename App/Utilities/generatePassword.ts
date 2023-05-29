@@ -1,4 +1,4 @@
-export const generateDefaultPassword = (): string => {
+const generateDefaultPassword = async(): Promise<string> => {
   const chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let password = "";
   for (let i = 0; (i = 8); i++) {
@@ -7,3 +7,5 @@ export const generateDefaultPassword = (): string => {
   }
   return password;
 };
+
+export default generateDefaultPassword;
