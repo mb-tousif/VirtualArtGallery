@@ -58,8 +58,9 @@
 
 #### Common User Info for Authentication:
 - Id
-- role
+- email
 - Password
+- role
 - createdAt
 - updatedAt
 - userId || adminId || artistId
