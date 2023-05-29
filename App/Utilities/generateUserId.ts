@@ -8,8 +8,6 @@ const getLastUserId = async () => {
 const generateUserId = async ()=> {
     const lastUserId: string = (await getLastUserId())|| (0).toString().padStart(5, '0');
     const userId = (parseInt(lastUserId) + 1).toString().padStart(5, '0');
-    console.log(userId);
-    
     return userId;
 }
 

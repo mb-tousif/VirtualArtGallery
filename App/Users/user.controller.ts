@@ -8,15 +8,17 @@ export const createUser: RequestHandler = async (req, res) => {
     userInfo.password = generateDefaultPassword();
     userInfo.userId = await generateUserId();
     const result = await createUserService(userInfo);
+    console.log(userInfo.password, userInfo.userId);
+    
     await result.save();
     res.status(200).json({
       message: "Successfully user created 🎉",
       data: result,
     });
-  } catch (error) {
+  } catch (error : any) {
     res.status(500).json({
       status: "fail 💥",
-      message: error,
+      message: error.message,
     });
   }
 };

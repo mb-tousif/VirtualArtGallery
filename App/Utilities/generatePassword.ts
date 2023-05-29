@@ -1,7 +1,7 @@
-const generateDefaultPassword = async(): Promise<string> => {
+const generateDefaultPassword = () => {
   const chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let password = "";
-  for (let i = 0; (i = 8); i++) {
+  let password: string= "";
+  for (let i = 0; (i < 8); i++) {
     const randomIndex = Math.floor(Math.random() * chars.length);
     password += chars.charAt(randomIndex);
   }
