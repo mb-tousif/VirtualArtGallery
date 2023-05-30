@@ -1,0 +1,25 @@
+
+export type TArtist = {
+    email: string;
+    password: string;
+    userId: string;
+    role: string;
+    name?: string
+    gender?: string;
+    DOB?: string | Date;
+    ECN?: string;
+    reference?: string;
+    contactNo?: string;
+    address?: string;
+    department?: string;
+    artSold?: [
+        {
+            artId: string;
+            artName: string;
+            artPrice: number;
+            artQuantity: number;
+            artSoldDate: Date;
+            totalAmount: number;
+        }
+    ];
+};

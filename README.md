@@ -70,10 +70,10 @@
 - name [firstName, middleName, lastName]
 - email
 - gender
-- DOB
+- DOB (Date of Birth)
 - reference
 - contactNo
-- emergencyContactNo
+- ECN (emergency contact number)
 - presentAddress
 - permanentAddress
 - purchasedArt
@@ -84,9 +84,9 @@
 - name [firstName, middleName, lastName]
 - email
 - gender
-- DOB
+- DOB (Date of Birth)
 - contactNo
-- emergencyContactNo
+- ECN (emergency contact number)
 - department
 - designation
 
@@ -95,9 +95,9 @@
 - name [firstName, middleName, lastName]
 - Email
 - gender
-- DOB
+- DOB (Date of Birth)
 - contactNo
-- emergencyContactNo
+- ECN (emergency contact number)
 - department
 - Artist
 - Designation

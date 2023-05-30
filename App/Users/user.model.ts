@@ -3,11 +3,6 @@ import { TUser } from "./user.interfaces";
 
 const userSchema = new Schema<TUser>(
   {
-    userId: {
-      type: String,
-      required: true,
-      // unique: true,
-    },
     email: {
       type: String,
       required: [true, "Email is required"],
@@ -17,12 +12,47 @@ const userSchema = new Schema<TUser>(
       type: String,
       required: [true, "Password is required"],
     },
+    userId: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    name: {
+      type: String,
+      trim: true,
+    },
     role: {
       type: String,
       required: true,
-      enum: ["user", "admin", "superAdmin", "artist"],
+      enum: ["user", "activeUser", "artist", "admin", "superAdmin"],
       default: "user",
     },
+    gender: {
+      type: String,
+      enum: ["Male", "Female", "Other"],
+    },
+    DOB: {
+      type: Date || String,
+      trim: true,
+    },
+    ECN: {
+      type: String,
+      trim: true,
+    },
+    reference: {
+      type: String,
+      trim: true,
+    },
+    contactNo: {
+      type: String,
+      trim: true,
+    },
+    address: {
+      type: String,
+      trim: true,
+    },
+    purchasedArt: [String],
+    favoritesArt: [String],
   },
   {
     timestamps: true,
