@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "name": "VirtualArtGallery",
+    "builds": [
+       { "src": "./App/index.ts", "use": "@vercel/node" }
+    ],
+    "routes": [
+       { "src": "/App(.*)", "dest": "./App/index.ts" }
+    ]
+ }
