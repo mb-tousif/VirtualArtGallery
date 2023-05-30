@@ -101,6 +101,8 @@
 - department
 - Artist
 - Designation
+- artSold
+> artId, artName, artPrice, artQuantity, artSoldDate, totalAmount
 
 ### API END POINTS:
 #### General Users API END POINTS:

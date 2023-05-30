@@ -1,4 +1,3 @@
-import { RequestHandler } from "express";
 import { TUser } from "./user.interfaces";
 import { User } from "./user.model";
 
