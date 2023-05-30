@@ -5,6 +5,6 @@
        { "src": "./App/index.ts", "use": "@vercel/node" }
     ],
     "routes": [
-       { "src": "/App(.*)", "dest": "./App/index.ts" }
+       { "src": "/App(.*)", "dest": "./index.ts" }
     ]
  }
