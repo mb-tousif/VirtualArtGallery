@@ -104,6 +104,18 @@
 - artSold
 > artId, artName, artPrice, artQuantity, artSoldDate, totalAmount
 
+#### Art Model
+- Id
+- Name
+- Artist
+- Draw time
+- Description
+- Rating
+- Origination
+- Price
+- Stock
+- Sold Reference
+
 ### API END POINTS:
 #### General Users API END POINTS:
 - users/create-User (POST)
