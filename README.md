@@ -47,14 +47,14 @@
 - Access to Art Gallery and Personal Information.
 - Artist can manage their Art Gallery resources
 
+#### Models
+
 #### Permission:
 - Title
 
 #### UserPermission:
 - permissionId
 - userId
-
-#### Models
 
 #### Common User Info for Authentication:
 - Id

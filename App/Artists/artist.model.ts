@@ -23,7 +23,7 @@ const artistSchema = new Schema <TArtist>({
     role: {
         type: String,
         required: true,
-        enum: ["user", "activeUser", "artist", "admin", "superAdmin"],
+        enum: ["artist", "seniorArtist", "adminArtist"],
         default: "artist",
     },
     DOB: {

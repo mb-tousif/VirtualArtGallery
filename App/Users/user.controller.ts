@@ -13,7 +13,7 @@ export const createUser: RequestHandler = async (req, res) => {
     await result.save();
     res.status(200).json({
       message: "Successfully user created 🎉",
-      data: result,
+      defaultPassword: result.password,
     });
   } catch (error : any) {
     res.status(500).json({
