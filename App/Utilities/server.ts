@@ -1,8 +1,8 @@
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-
+import config from '../Config/index'
 dotenv.config();
-const URL = process.env.MONGODB_CONNECTION_URL as string;
+const URL = config.url as string;
 
 mongoose.set("strictQuery", true);
 

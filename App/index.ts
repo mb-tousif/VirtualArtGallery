@@ -3,12 +3,12 @@ import cors from "cors";
 import dotenv from "dotenv";
 import ConnectDB from "./Utilities/server";
 import router from "./Routes/routes";
+import config from './Config/index'
 
 dotenv.config();
 const app = express();
 app.use(cors({origin: '*'}));
 app.use(express.json());
-const port = process.env.PORT || 2023;
 app.use(express.urlencoded({ extended: true }));
 
 ConnectDB();
@@ -21,8 +21,8 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1", router);
 
-app.listen(port, () => {
-  console.log(`Server running on port: 🚀 ${port}`);
+app.listen(config.port, () => {
+  console.log(`Server running on port: 🚀 ${config.port}`);
 });
 
 app.all("*", (req, res) => {
