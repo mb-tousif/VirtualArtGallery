@@ -5,6 +5,7 @@ import ConnectDB from "./Utilities/server";
 import router from "./Routes/routes";
 import config from './Config/index'
 import {infoLogger} from "./Shared/Logger";
+import globalErrorHandler from "./middleware/globalErrorHandling";
 
 dotenv.config();
 const app = express();
@@ -21,14 +22,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1", router);
-app.use((err:any, req: Request, res: Response, next: NextFunction) => {
-  if (err instanceof Error) {
-    res.status(500).json({
-      status: "fail 💥",
-      err,
-    });
-  }
-});
+app.use(globalErrorHandler);
 
 app.listen(config.port, () => {
   infoLogger.info(`Server running on port: 🚀 ${config.port}`);

@@ -1,0 +1,9 @@
+Tue Jun 06 2023 0:22:19 } [VAG] error: bad auth : authentication failed
+Tue Jun 06 2023 0:22:59 } [VAG] error: bad auth : authentication failed
+Tue Jun 06 2023 0:23:29 } [VAG] error: bad auth : authentication failed
+Tue Jun 06 2023 0:26:3 } [VAG] error: bad auth : authentication failed
+Tue Jun 06 2023 0:30:10 } [VAG] error: bad auth : authentication failed
+Tue Jun 06 2023 0:30:24 } [VAG] error: bad auth : authentication failed
+Tue Jun 06 2023 0:32:16 } [VAG] error: 🐱‍🏍 globalErrorHandler ~~ user validation failed: email: Email is required
+Tue Jun 06 2023 0:33:10 } [VAG] error: 🐱‍🏍 globalErrorHandler ~~ user validation failed: email: Email is required
+Tue Jun 06 2023 0:36:12 } [VAG] error: 🐱 globalErrorHandler 💥 user validation failed: email: Email is required
