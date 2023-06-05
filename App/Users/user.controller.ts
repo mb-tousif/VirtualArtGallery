@@ -1,9 +1,9 @@
 import { RequestHandler } from "express";
-import { createUserService } from "./user.services";
+import { createUserService, getAllUsersService } from "./user.services";
 import generateDefaultPassword from "../Utilities/generatePassword";
 import generateUserId from "../Utilities/generateUserId";
 
-export const createUser: RequestHandler = async (req, res) => {
+export const createUser: RequestHandler = async (req, res, next) => {
   try {
     const userInfo = req.body;
     userInfo.password = generateDefaultPassword();
@@ -15,10 +15,19 @@ export const createUser: RequestHandler = async (req, res) => {
       message: "Successfully user created 🎉",
       defaultPassword: result.password,
     });
-  } catch (error : any) {
-    res.status(500).json({
-      status: "fail 💥",
-      message: error.message,
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const getAllUsers: RequestHandler = async (req, res, next) => {
+  try {
+    const result = await getAllUsersService();
+    res.status(200).json({
+      status: "success",
+      result,
     });
+  } catch (error : any) {
+    next(error);
   }
 };

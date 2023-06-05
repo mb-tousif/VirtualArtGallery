@@ -1,4 +1,4 @@
-import express from "express";
+import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import ConnectDB from "./Utilities/server";
@@ -20,6 +20,14 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1", router);
+app.use((err:any, req: Request, res: Response, next: NextFunction) => {
+  if (err instanceof Error) {
+    res.status(500).json({
+      status: "fail 💥",
+      err,
+    });
+  }
+});
 
 app.listen(config.port, () => {
   console.log(`Server running on port: 🚀 ${config.port}`);
