@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import ConnectDB from "./Utilities/server";
 import router from "./Routes/routes";
 import config from './Config/index'
+import {infoLogger} from "./Shared/Logger";
 
 dotenv.config();
 const app = express();
@@ -30,7 +31,7 @@ app.use((err:any, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.listen(config.port, () => {
-  console.log(`Server running on port: 🚀 ${config.port}`);
+  infoLogger.info(`Server running on port: 🚀 ${config.port}`);
 });
 
 app.all("*", (req, res) => {

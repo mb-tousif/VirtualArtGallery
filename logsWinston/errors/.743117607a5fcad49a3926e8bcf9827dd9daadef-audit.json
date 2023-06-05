@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Let's Code\\Next Level\\Classes\\Back-end\\logsWinston\\errors\\.743117607a5fcad49a3926e8bcf9827dd9daadef-audit.json",
+    "files": [
+        {
+            "date": 1685986563835,
+            "name": "D:\\Let's Code\\Next Level\\Classes\\Back-end\\logsWinston\\errors\\VAG-2023-05-06-23-error.log",
+            "hash": "351d1937794ae64b5af6b700700d429477044302f62eb9223e9b166e6004dfcc"
+        }
+    ],
+    "hashType": "sha256"
+}
