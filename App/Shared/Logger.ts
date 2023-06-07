@@ -9,7 +9,7 @@ const myFormat = printf(({ level, message, label, timestamp }) => {
   const hour = date.getHours();
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
-  return `${date.toDateString()} ${hour}:${minutes}:${seconds} } [${label}] ${level}: ${message}`;
+  return `${date.toDateString()} ${hour}:${minutes}:${seconds} [${label}] ${level}: ${message}`;
 });
 
 export const infoLogger = createLogger({
@@ -24,10 +24,11 @@ export const infoLogger = createLogger({
         'successes',
         'VAG-%DATE%-success.log'
       ),
-      datePattern: 'YYYY-DD-MM-HH',
+      datePattern: "YYYY-MM-DD",
+      // datePattern: 'YYYY-DD-MM-HH',
       zippedArchive: true,
       maxSize: '20m',
-      maxFiles: '14d',
+      maxFiles: '4d',
     }),
   ],
 });
@@ -44,10 +45,10 @@ export const errorLogger = createLogger({
         'errors',
         'VAG-%DATE%-error.log'
       ),
-      datePattern: 'YYYY-DD-MM-HH',
+      datePattern: 'YYYY-DD-MM',
       zippedArchive: true,
       maxSize: '20m',
-      maxFiles: '14d',
+      maxFiles: '4d',
     }),
   ],
 });

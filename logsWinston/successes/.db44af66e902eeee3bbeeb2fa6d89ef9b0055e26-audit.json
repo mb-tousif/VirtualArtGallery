@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 4
+    },
+    "auditLog": "D:\\Let's Code\\Next Level\\Classes\\Back-end\\logsWinston\\successes\\.db44af66e902eeee3bbeeb2fa6d89ef9b0055e26-audit.json",
+    "files": [
+        {
+            "date": 1686064293185,
+            "name": "D:\\Let's Code\\Next Level\\Classes\\Back-end\\logsWinston\\successes\\VAG-2023-06-06-21-success.log",
+            "hash": "31df8baf81f3eb364d580165e397d9538c57fd548f2bd20c07eae83a57c9709e"
+        },
+        {
+            "date": 1686144426568,
+            "name": "D:\\Let's Code\\Next Level\\Classes\\Back-end\\logsWinston\\successes\\VAG-2023-07-06-19-success.log",
+            "hash": "fb9b37080475fb3e9188151e50f6513dce9666a09c4a8d22ac47af3793eeebdc"
+        }
+    ],
+    "hashType": "sha256"
+}

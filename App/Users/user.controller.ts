@@ -3,9 +3,25 @@ import { createUserService, getAllUsersService } from "./user.services";
 import generateDefaultPassword from "../Utilities/generatePassword";
 import generateUserId from "../Utilities/generateUserId";
 import ServerAPIError from "../ErrorHandling/ErrorExtendedClass";
+import { z } from "zod";
 
 export const createUser: RequestHandler = async (req, res, next) => {
   try {
+    const createUserZodSchema = z.object({
+      email: z.string().email(),
+      // password: z.string().min(6).max(15).optional(),
+      // role: z.enum(["user", "activeUser", "artist", "admin", "superAdmin"]).optional(),
+      // name: z.string().min(3).max(50).optional(),
+      // gender: z.enum(["Male", "Female", "Other"]).optional(),
+      // DOB: z.string().optional(),
+      // ECN: z.string().optional(),
+      // reference: z.string().optional(),
+      // contactNo: z.string().optional(),
+      // address: z.string().optional(),
+      // purchasedArt: z.array(z.string()).optional(),
+      // favoritesArt: z.array(z.string()).optional(),
+    });
+    await createUserZodSchema.parseAsync(req);
     const userInfo = req.body;
     userInfo.password = generateDefaultPassword();
     userInfo.userId = await generateUserId();
