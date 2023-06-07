@@ -54,6 +54,11 @@ const artistSchema = new Schema <TArtist>({
         type: String,
         trim: true,
     },
+    award: {
+        type: String,
+        enum: ["Venice Biennale", "Art Basel", "Whitney Biennial", "Art Dubai", "Dhaka Art Summit", "Bengal Art Week", "Young Artists Art Exhibition"],
+        default: "Young Artists Art Exhibition",
+    },
     artSold: [
         {
             artId: String,

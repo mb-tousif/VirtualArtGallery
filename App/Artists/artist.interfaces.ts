@@ -12,6 +12,7 @@ export type TArtist = {
     contactNo?: string;
     address?: string;
     department?: string;
+    award: string;
     artSold?: [
         {
             artId: string;
