@@ -1,13 +1,13 @@
-import { Server } from 'http';
-import dotenv from 'dotenv';
-import mongoose from 'mongoose';
-import config from '../Config/index'
-import { infoLogger, errorLogger } from '../Shared/Logger';
-import { log } from 'winston';
+import { Server } from "http";
+import dotenv from "dotenv";
+import mongoose from "mongoose";
+import config from "../Config/index";
+import { infoLogger, errorLogger } from "../Shared/Logger";
+import { log } from "winston";
 dotenv.config();
 const URL = config.url as string;
 
-process.on('uncaughtException', error => {
+process.on("uncaughtException", (error) => {
   errorLogger.error(error);
   process.exit(1);
 });
@@ -22,10 +22,8 @@ const ConnectDB = async (): Promise<void> => {
     infoLogger.info(`🗂️ MongoDB Server connected`);
   } catch (error) {
     errorLogger.error(error);
-    // console.log("💥 Error while connecting with mongoDB 🚦");
-    // console.log(error);
   }
-  process.on('unhandledRejection', error => {
+  process.on("unhandledRejection", (error) => {
     if (server) {
       server.close(() => {
         errorLogger.error(error);
@@ -37,22 +35,19 @@ const ConnectDB = async (): Promise<void> => {
   });
 };
 
-process.on('SIGTERM', async () => {
-  console.log('Received SIGTERM signal. Gracefully shutting down...');
+process.on("SIGTERM", async () => {
+  console.log("Received SIGTERM signal. Gracefully shutting down...");
   // Close database connections. This example uses mongoose but this could be any connection to MongoDB.
   await mongoose.connection.close();
-  infoLogger.info('🗂️ MongoDB Server disconnected')
+  infoLogger.info("🗂️ MongoDB Server disconnected");
   if (server) {
     server.close(() => {
-      errorLogger.error('Process terminated')
+      errorLogger.error("Process terminated");
     });
   } else {
     process.exit(1);
   }
-
-
   process.exit(0);
 });
-
 
 export default ConnectDB;

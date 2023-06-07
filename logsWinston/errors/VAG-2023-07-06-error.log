@@ -1,0 +1,11 @@
+Wed Jun 07 2023 22:33:16 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Required"
+  }
+]

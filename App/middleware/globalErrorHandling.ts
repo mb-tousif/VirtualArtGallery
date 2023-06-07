@@ -8,6 +8,7 @@ import { errorLogger } from "../Shared/Logger";
 import { IGenericErrorMessage } from "../ErrorHandling/error.interfaces";
 import handleValidationError from "../ErrorHandling/error.validation";
 import ServerAPIError from "../ErrorHandling/ErrorExtendedClass";
+import handleZodError from "../ErrorHandling/error.zod";
 
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
   config.env === "development"
@@ -23,12 +24,12 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
     message = simplifiedError.message;
     errorMessages = simplifiedError.errorMessages;
   }
-    // else if (error instanceof ZodError) {
-    //   const simplifiedError = handleZodError(error);
-    //   statusCode = simplifiedError.statusCode;
-    //   message = simplifiedError.message;
-    //   errorMessages = simplifiedError.errorMessages;
-    // }
+    else if (error instanceof ZodError) {
+      const simplifiedError = handleZodError(error);
+      statusCode = simplifiedError.statusCode;
+      message = simplifiedError.message;
+      errorMessages = simplifiedError.errorMessages;
+    }
   else if (error instanceof ServerAPIError) {
     statusCode = error?.statusCode;
     message = error.message;
@@ -63,8 +64,3 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
 };
 
 export default globalErrorHandler;
-
-//path:
-//message:
-// 2025 Fall
-// 2025 and
