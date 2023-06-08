@@ -1,0 +1,78 @@
+Thu Jun 08 2023 12:36:19 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Thu Jun 08 2023 12:37:36 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Thu Jun 08 2023 12:38:59 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Thu Jun 08 2023 12:39:1 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Thu Jun 08 2023 12:39:33 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Thu Jun 08 2023 12:39:35 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Thu Jun 08 2023 12:39:37 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Thu Jun 08 2023 13:7:54 [VAG] error: 🐱 globalErrorHandler 💥 Cast to ObjectId failed for value "00005" (type string) at path "_id" for model "user"

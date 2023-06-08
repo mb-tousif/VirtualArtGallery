@@ -1,9 +1,8 @@
 import { RequestHandler } from "express";
-import { createUserService, getAllUsersService } from "./user.services";
+import { createUserService, getAllUsersService, getUserByUserIdService } from "./user.services";
 import generateDefaultPassword from "../Utilities/generatePassword";
 import generateUserId from "../Utilities/generateUserId";
 import ServerAPIError from "../ErrorHandling/ErrorExtendedClass";
-import { z } from "zod";
 
 export const createUser: RequestHandler = async (req, res, next) => {
   try {
@@ -28,6 +27,22 @@ export const createUser: RequestHandler = async (req, res, next) => {
 export const getAllUsers: RequestHandler = async (req, res, next) => {
   try {
     const result = await getAllUsersService();
+    if (!result) {
+      throw new ServerAPIError(400,"No users found");
+    };
+    res.status(200).json({
+      status: "success",
+      result,
+    });
+  } catch (error : any) {
+    next(error);
+  }
+};
+
+export const getUserByUserId: RequestHandler = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const result = await getUserByUserIdService(id);
     if (!result) {
       throw new ServerAPIError(400,"No users found");
     };
