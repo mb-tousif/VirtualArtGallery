@@ -2,7 +2,7 @@ import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import ConnectDB from "./Utilities/server";
-import router from "./Routes/routes";
+import router from "./Routes/index";
 import config from "./Config/index";
 import { infoLogger } from "./Shared/Logger";
 import globalErrorHandler from "./middleware/globalErrorHandling";
