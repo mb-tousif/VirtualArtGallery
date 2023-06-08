@@ -8,4 +8,4 @@ router.get('/getAllUsers', getAllUsers)
 router.post('/createUser', zodValidateRequest(createUserZodSchema),  createUser)
 
 
-export const UserRoutes = router;
+export const userRoutes = router;

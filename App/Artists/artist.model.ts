@@ -11,7 +11,7 @@ const artistSchema = new Schema <TArtist>({
         type: String,
         required: [true, "Password is required"],
     },
-    userId: {
+    artistId: {
         type: String,
         required: true,
         unique: true,

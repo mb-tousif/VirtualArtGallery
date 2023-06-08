@@ -2,7 +2,7 @@
 export type TArtist = {
     email: string;
     password: string;
-    userId: string;
+    artistId: string;
     role: string;
     name?: string
     gender?: string;

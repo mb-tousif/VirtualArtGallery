@@ -5,9 +5,10 @@ import { TUser } from "../Users/user.interfaces";
 export const updateUserToArtist = async (payload: string) => {
   const result = await User.findOne( { userId: payload } ) as TUser;
   const newCollection = new Artist({
-    userId: result.userId,
+    artistId: result.userId,
     email: result.email,
     password: result.password,
-})
-    return newCollection;
+  });
+  await User.deleteOne( { userId: payload } );
+  return newCollection;
 }
