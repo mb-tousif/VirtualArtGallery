@@ -1,13 +1,11 @@
-import { RequestHandler } from 'express';
-import {
-  createUserService,
-  getAllUsersService,
-  getUserByUserIdService,
-} from './user.services';
+import { RequestHandler} from 'express';
+import httpStatus from 'http-status';
+import responseHandler from '../Shared/responseHandler';
 import generateDefaultPassword from '../Utilities/generatePassword';
 import generateUserId from '../Utilities/generateUserId';
 import ServerAPIError from '../ErrorHandling/ErrorExtendedClass';
 import asyncHandler from '../Shared/asyncHandler';
+import { createUserService, getAllUsersService, getUserByUserIdService } from './user.services';
 
 export const createUser: RequestHandler = asyncHandler(
   async (req, res, next) => {
@@ -20,9 +18,11 @@ export const createUser: RequestHandler = asyncHandler(
       throw new ServerAPIError(400, 'User not created');
     }
     await result.save();
-    res.status(200).json({
+   responseHandler(res, {
+      statusCode: httpStatus.CREATED,
+      success: true,
       message: 'Successfully user created 🎉',
-      defaultPassword: result.password,
+      data: { defaultPassword: result.password}
     });
     // next();
   }
@@ -34,9 +34,11 @@ export const getAllUsers: RequestHandler = asyncHandler(
     if (!result) {
       throw new ServerAPIError(400, 'No users found');
     }
-    res.status(200).json({
-      status: 'success',
-      result,
+    responseHandler(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Successfully users fetched 🎉',
+      data: result
     });
     // next();
   }
@@ -49,9 +51,10 @@ export const getUserByUserId: RequestHandler = asyncHandler(
     if (!result) {
       throw new ServerAPIError(400, 'No users found');
     }
-    res.status(200).json({
-      status: 'success',
-      result,
+    responseHandler(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      data: result
     });
     // next();
   }
