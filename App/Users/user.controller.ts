@@ -8,7 +8,7 @@ import asyncHandler from '../Shared/asyncHandler';
 import { createUserService, getAllUsersService, getUserByUserIdService } from './user.services';
 
 export const createUser: RequestHandler = asyncHandler(
-  async (req, res, next) => {
+  async (req, res) => {
     const userInfo = req.body;
     userInfo.password = generateDefaultPassword();
     userInfo.userId = await generateUserId();
@@ -29,7 +29,7 @@ export const createUser: RequestHandler = asyncHandler(
 );
 
 export const getAllUsers: RequestHandler = asyncHandler(
-  async (req, res, next) => {
+  async (req, res) => {
     const result = await getAllUsersService();
     if (!result) {
       throw new ServerAPIError(400, 'No users found');
@@ -45,7 +45,7 @@ export const getAllUsers: RequestHandler = asyncHandler(
 );
 
 export const getUserByUserId: RequestHandler = asyncHandler(
-  async (req, res, next) => {
+  async (req, res) => {
     const { id } = req.params;
     const result = await getUserByUserIdService(id);
     if (!result) {
