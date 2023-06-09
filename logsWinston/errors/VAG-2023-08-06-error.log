@@ -76,3 +76,28 @@ Thu Jun 08 2023 12:39:37 [VAG] error: 🐱 globalErrorHandler 💥 [
   }
 ]
 Thu Jun 08 2023 13:7:54 [VAG] error: 🐱 globalErrorHandler 💥 Cast to ObjectId failed for value "00005" (type string) at path "_id" for model "user"
+Thu Jun 08 2023 13:24:45 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "params",
+      "id"
+    ],
+    "message": "Required"
+  }
+]
+Thu Jun 08 2023 13:24:56 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "params",
+      "id"
+    ],
+    "message": "Required"
+  }
+]
+Thu Jun 08 2023 21:36:59 [VAG] error: Server selection timed out after 30000 ms

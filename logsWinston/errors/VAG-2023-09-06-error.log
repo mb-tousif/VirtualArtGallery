@@ -1,0 +1,265 @@
+Fri Jun 09 2023 21:14:39 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:23:10 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:31:58 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:33:50 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:33:52 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:39:56 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:40:57 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:40:58 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:40:59 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:41:0 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:43:8 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:43:40 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:43:42 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:43:42 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:45:30 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:45:31 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:47:49 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:47:51 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:47:51 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:50:8 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Required"
+  }
+]
+Fri Jun 09 2023 21:54:12 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "received": "supperAdmin",
+    "code": "invalid_enum_value",
+    "options": [
+      "user",
+      "activeUser",
+      "artist",
+      "admin",
+      "superAdmin"
+    ],
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "Invalid enum value. Expected 'user' | 'activeUser' | 'artist' | 'admin' | 'superAdmin', received 'supperAdmin'"
+  }
+]
+Fri Jun 09 2023 22:18:59 [VAG] error: 🐱 globalErrorHandler 💥 Cannot set headers after they are sent to the client
+Fri Jun 09 2023 22:22:27 [VAG] error: 🐱 globalErrorHandler 💥 Cannot set headers after they are sent to the client
+Fri Jun 09 2023 22:22:29 [VAG] error: 🐱 globalErrorHandler 💥 Cannot set headers after they are sent to the client
+Fri Jun 09 2023 22:22:56 [VAG] error: 🐱 globalErrorHandler 💥 Cannot set headers after they are sent to the client
+Fri Jun 09 2023 22:29:23 [VAG] error: 🐱 globalErrorHandler 💥 Cannot set headers after they are sent to the client
+Fri Jun 09 2023 22:36:58 [VAG] error: 🐱 globalErrorHandler 💥 Cannot set headers after they are sent to the client
+Fri Jun 09 2023 22:42:14 [VAG] error: 🐱 globalErrorHandler 💥 Cannot set headers after they are sent to the client

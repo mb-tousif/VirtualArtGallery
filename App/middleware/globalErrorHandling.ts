@@ -11,11 +11,11 @@ import ServerAPIError from "../ErrorHandling/ErrorExtendedClass";
 import handleZodError from "../ErrorHandling/error.zod";
 
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
-  config.env === "development"
+  config.env === 'development'
     ? console.log(`🐱 globalErrorHandler 💥`, error)
     : errorLogger.error(`🐱 globalErrorHandler 💥`, error);
-  let statusCode = 500;
-  let message = "Something went wrong !";
+  let statusCode;
+  let message;
   let errorMessages: IGenericErrorMessage[] = [];
 
   if (error?.name === "ValidationError") {
@@ -53,7 +53,7 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
       : [];
   }
 
-  res.status(statusCode).json({
+  res.status(400).json({
     success: false,
     message,
     errorMessages,

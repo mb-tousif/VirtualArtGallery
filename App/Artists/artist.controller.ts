@@ -1,8 +1,8 @@
 import { RequestHandler } from "express";
 import { updateUserToArtist } from "./artist.services";
+import asyncHandler from '../Shared/asyncHandler';
 
-export const updateToArtist: RequestHandler = async (req, res) => {
-  try {
+export const updateToArtist: RequestHandler = asyncHandler(async (req, res) => {
     const payload = req.body.userId;
     const result = await updateUserToArtist(payload);
     await result.save();
@@ -10,10 +10,4 @@ export const updateToArtist: RequestHandler = async (req, res) => {
       message: "Successfully updated to artist 🎉",
       result,
     });
-  } catch (error: any) {
-    res.status(500).json({
-      status: "fail 💥",
-      message: error.message,
-    });
-  }
-};
+});

@@ -7,12 +7,12 @@ export const createUserService = async (userInfo: TUser) => {
 };
 
 export const getAllUsersService = async () => {
-  const result = await User.find().lean();
-  // const result = await User.find({})
+  // const result = await User.find().lean();
+  const result = await User.find({})
   return result;
 }
 
 export const getUserByUserIdService = async (id: string) => {
-  const result = await User.findById(id)
+  const result = await User.findById({_id:id})
   return result;
 }

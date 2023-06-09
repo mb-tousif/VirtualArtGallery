@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import config from "../Config/index";
 import { infoLogger, errorLogger } from "../Shared/Logger";
-import { log } from "winston";
 dotenv.config();
 const URL = config.url as string;
 
