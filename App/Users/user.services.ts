@@ -1,5 +1,6 @@
 import { TUser } from "./user.interfaces";
 import { User } from "./user.model";
+import { performPagination } from "../Helper/performPagination";
 import { IPagination, IQueryResponse } from '../Utilities/globalInterfaces';
 export const createUserService = async (userInfo: TUser) => {
   const result = await User.create(userInfo);
@@ -8,8 +9,8 @@ export const createUserService = async (userInfo: TUser) => {
 
 export const getAllUsersService = async (paginationOptions: IPagination): Promise<IQueryResponse <TUser[]>> => {
   // const result = await User.find().lean();
-  const { page=1, limit=2, } = paginationOptions;
-  const result = await User.find().skip((page-1)*limit).limit(limit).lean();
+  const { page, limit, skip } = performPagination(paginationOptions);
+  const result = await User.find().skip(skip).limit(limit).lean();
   return {
     meta: {
       page,

@@ -1,8 +1,8 @@
 export interface IPagination {
     page?: number;
     limit?: number;
-    sort?: string;
-    order?: "asc" | "desc";
+    sortBy?: string;
+    sortOrder?: "asc" | "desc";
     // order?: "1" | "-1";
     search?: string;
 }
