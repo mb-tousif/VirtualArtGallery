@@ -3,6 +3,11 @@ type IApiResponse<T> = {
   statusCode: number;
   success: boolean;
   message?: string | null;
+  meta?: {
+    page: number;
+    limit: number;
+    totalPages: number;
+  };
   data?: T | null;
 };
 
@@ -11,6 +16,7 @@ const responseHandler = <T>(res: Response, data: IApiResponse<T>): void => {
     statusCode: data.statusCode,
     success: data.success,
     message: data.message,
+    meta: data.meta,
     data: data.data,
   };
 

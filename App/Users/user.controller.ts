@@ -41,7 +41,8 @@ export const getAllUsers: RequestHandler = asyncHandler(
       statusCode: httpStatus.OK,
       success: true,
       message: 'Successfully users fetched 🎉',
-      data: result
+      meta: result.meta,
+      data: result.data,
     });
     // next();
   }
