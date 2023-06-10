@@ -5,6 +5,8 @@ import generateDefaultPassword from '../Utilities/generatePassword';
 import generateUserId from '../Utilities/generateUserId';
 import ServerAPIError from '../ErrorHandling/ErrorExtendedClass';
 import asyncHandler from '../Shared/asyncHandler';
+import generalDataQuery from '../Shared/generalDataQuery';
+import { paginationFields } from '../Constants/pagination';
 import { createUserService, getAllUsersService, getUserByUserIdService } from './user.services';
 
 export const createUser: RequestHandler = asyncHandler(
@@ -30,7 +32,8 @@ export const createUser: RequestHandler = asyncHandler(
 
 export const getAllUsers: RequestHandler = asyncHandler(
   async (req, res) => {
-    const result = await getAllUsersService();
+    const paginationOptions = generalDataQuery(req.query, paginationFields);
+    const result = await getAllUsersService(paginationOptions);
     if (!result) {
       throw new ServerAPIError(400, 'No users found');
     }
