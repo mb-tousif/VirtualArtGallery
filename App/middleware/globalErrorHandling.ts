@@ -9,6 +9,7 @@ import { IGenericErrorMessage } from "../ErrorHandling/error.interfaces";
 import handleValidationError from "../ErrorHandling/error.validation";
 import ServerAPIError from "../ErrorHandling/ErrorExtendedClass";
 import handleZodError from "../ErrorHandling/error.zod";
+import handleCastError from "../ErrorHandling/handleCastError";
 
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
   config.env === 'development'
@@ -23,9 +24,14 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
     statusCode = simplifiedError.statusCode;
     message = simplifiedError.message;
     errorMessages = simplifiedError.errorMessages;
-  }
+  } 
     else if (error instanceof ZodError) {
       const simplifiedError = handleZodError(error);
+      statusCode = simplifiedError.statusCode;
+      message = simplifiedError.message;
+      errorMessages = simplifiedError.errorMessages;
+    }else if (error?.name === 'CastError') {
+      const simplifiedError = handleCastError(error);
       statusCode = simplifiedError.statusCode;
       message = simplifiedError.message;
       errorMessages = simplifiedError.errorMessages;

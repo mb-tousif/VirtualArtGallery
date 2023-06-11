@@ -1,0 +1,5 @@
+Sun Jun 11 2023 21:20:56 [VAG] error: Connection to ac-hk6dfaq-shard-00-01.kxps8cx.mongodb.net:27017 interrupted due to server monitor timeout
+Sun Jun 11 2023 21:58:29 [VAG] error: No users found
+Sun Jun 11 2023 22:0:3 [VAG] error: 🐱 globalErrorHandler 💥 No users found
+Sun Jun 11 2023 22:0:48 [VAG] error: 🐱 globalErrorHandler 💥 No users found
+Sun Jun 11 2023 22:1:15 [VAG] error: 🐱 globalErrorHandler 💥 No users found

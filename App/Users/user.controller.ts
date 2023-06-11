@@ -49,7 +49,7 @@ export const getAllUsers: RequestHandler = asyncHandler(
 );
 
 export const getUserByUserId: RequestHandler = asyncHandler(
-  async (req, res) => {
+  async (req, res, next) => {
     const { id } = req.params;
     const result = await getUserByUserIdService(id);
     if (!result) {

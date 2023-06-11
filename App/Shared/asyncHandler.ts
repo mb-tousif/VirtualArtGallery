@@ -5,7 +5,7 @@ const asyncHandler =
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     // await fn(req, res, next).catch((error) => next(error));
     try {
-    fn(req, res, next);
+    await fn(req, res, next);
     } catch (error) {
       next(error);
     }

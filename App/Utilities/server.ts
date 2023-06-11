@@ -37,8 +37,8 @@ const ConnectDB = async (): Promise<void> => {
 process.on("SIGTERM", async () => {
   console.log("Received SIGTERM signal. Gracefully shutting down...");
   // Close database connections. This example uses mongoose but this could be any connection to MongoDB.
-  await mongoose.connection.close();
   infoLogger.info("🗂️ MongoDB Server disconnected");
+  await mongoose.connection.close();
   if (server) {
     server.close(() => {
       errorLogger.error("Process terminated");
