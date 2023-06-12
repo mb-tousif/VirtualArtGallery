@@ -7,7 +7,7 @@ import ServerAPIError from '../ErrorHandling/ErrorExtendedClass';
 import asyncHandler from '../Shared/asyncHandler';
 import generalDataQuery from '../Shared/generalDataQuery';
 import { paginationFields, userSearchQueryFields } from '../Constants/pagination';
-import { createUserService, getAllUsersService, getUserByUserIdService } from './user.services';
+import { createUserService, getAllUsersService, getUserByUserIdService, updateUserService } from './user.services';
 
 export const createUser: RequestHandler = asyncHandler(
   async (req, res) => {
@@ -65,3 +65,20 @@ export const getUserByUserId: RequestHandler = asyncHandler(
     // next();
   }
 );
+
+// update userById
+export const updateUserById: RequestHandler = asyncHandler(
+  async (req, res, next) => {
+    const { id } = req.params;
+    const data = req.body;
+    const result = await updateUserService(id, data);
+    if (!result) {
+      throw new ServerAPIError(400, 'No users found');
+    }
+    responseHandler(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      data: result
+    });
+    // next();
+  });

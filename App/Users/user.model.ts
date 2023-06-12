@@ -32,7 +32,7 @@ const userSchema = new Schema<TUser>(
       enum: ["Male", "Female", "Other"],
     },
     DOB: {
-      type: Date || String,
+      type: String || Date,
       trim: true,
     },
     ECN: {

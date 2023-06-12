@@ -22,3 +22,4 @@ Mon Jun 12 2023 12:59:12 [VAG] error: 🐱 globalErrorHandler 💥 Can't use $op
 Mon Jun 12 2023 13:1:25 [VAG] error: 🐱 globalErrorHandler 💥 Can't use $options with Date.
 Mon Jun 12 2023 13:41:39 [VAG] error: 🐱 globalErrorHandler 💥 $and/$or/$nor must be a nonempty array
 Mon Jun 12 2023 13:50:10 [VAG] error: 🐱 globalErrorHandler 💥 $and/$or/$nor must be a nonempty array
+Mon Jun 12 2023 22:23:35 [VAG] error: 🐱 globalErrorHandler 💥 No users found

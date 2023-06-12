@@ -70,3 +70,9 @@ export const getUserByUserIdService = async (id: string) => {
   const result = await User.findById({_id:id})
   return result;
 }
+
+// update userById
+export const updateUserService = async (id: string, data:Partial<TUser>) => {
+  const result = await User.findByIdAndUpdate({_id:id}, data, {new: true})
+  return result;
+}
