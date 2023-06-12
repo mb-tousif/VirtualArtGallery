@@ -6,16 +6,6 @@
     "auditLog": "D:\\Let's Code\\Next Level\\Classes\\Back-end\\logsWinston\\errors\\.a370354ad34eccfe33382e66cec448fb2cb620cc-audit.json",
     "files": [
         {
-            "date": 1686146857156,
-            "name": "D:\\Let's Code\\Next Level\\Classes\\Back-end\\logsWinston\\errors\\VAG-2023-07-06-error.log",
-            "hash": "88a71c5c461c99176d64814c6d9cf9d0a552d35852db497b6760b527d59d7725"
-        },
-        {
-            "date": 1686193762164,
-            "name": "D:\\Let's Code\\Next Level\\Classes\\Back-end\\logsWinston\\errors\\VAG-2023-08-06-error.log",
-            "hash": "b15636ba409e7b84d216b53c3b50d2d2a5f78966d5aab5a758adc3c45bb372ab"
-        },
-        {
             "date": 1686316476087,
             "name": "D:\\Let's Code\\Next Level\\Classes\\Back-end\\logsWinston\\errors\\VAG-2023-09-06-error.log",
             "hash": "0e60453c54f2fdfcfc6d5ac66407199d43503eb47b5cafeadf879ba5333237ee"
@@ -29,6 +19,11 @@
             "date": 1686420223344,
             "name": "D:\\Let's Code\\Next Level\\Classes\\Back-end\\logsWinston\\errors\\VAG-2023-11-06-error.log",
             "hash": "6832f0dc3350bb6ce047f9873d53c9a1a66ceac56133a2bb081124b4150bb1d8"
+        },
+        {
+            "date": 1686540137578,
+            "name": "D:\\Let's Code\\Next Level\\Classes\\Back-end\\logsWinston\\errors\\VAG-2023-12-06-error.log",
+            "hash": "112b57a10c6c89c88d71be365dee72b63cd9af93f98082e0fa6a258dc293188e"
         }
     ],
     "hashType": "sha256"

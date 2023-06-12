@@ -1,4 +1,4 @@
-import { Model } from "mongoose";
+// import { Model } from "mongoose";
 
 export type TUser = {
     email: string;
@@ -15,6 +15,11 @@ export type TUser = {
     purchasedArt?: string[];
     favoritesArt?: string[];
 };
+
+export type TSearchedUser = {
+    search?: string;
+};
+
 // export interface IUserMethods {
 //     generateDefaultPassword: () => string;
 //     generateUserId: () => string;

@@ -32,8 +32,10 @@ export const createUser: RequestHandler = asyncHandler(
 
 export const getAllUsers: RequestHandler = asyncHandler(
   async (req, res) => {
+    const searchQuery = generalDataQuery(req.query, ['search']);
     const paginationOptions = generalDataQuery(req.query, paginationFields);
-    const result = await getAllUsersService(paginationOptions);
+    // const result = await getAllUsersService( paginationOptions,);
+    const result = await getAllUsersService( paginationOptions, searchQuery );
     if (!result) {
       throw new ServerAPIError(400, 'No users found');
     }
