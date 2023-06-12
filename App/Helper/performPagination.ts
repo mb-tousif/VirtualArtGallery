@@ -16,7 +16,7 @@ type IReturn = {
 }
 
 export const performPagination = (options: IOptions): IReturn => {
-  const { page = 1, limit = 4 } = options;
+  const { page = 1, limit = 2 } = options;
   const skip= (page - 1) * limit;
   const sortBy= options.sortBy || "userId"
   const sortOrder= options.sortOrder || "asc"

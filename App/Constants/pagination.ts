@@ -2,3 +2,4 @@ export const paginationFields = [ "page", "limit", "sortBy", "sortOrder", "searc
 
 // Users Constants
 export const userSearchFields = [ "role", "name", "userId", "email", "contactNo", "address" ];
+export const userSearchQueryFields = [ "search", "role", "name", "userId", "email", "contactNo", "address" ];

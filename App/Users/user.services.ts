@@ -13,7 +13,7 @@ export const createUserService = async (userInfo: TUser) => {
 export const getAllUsersService = async (paginationOptions: IPagination, searchQuery: TSearchedUser): Promise<IQueryResponse <TUser[]>> => {
   // const result = await User.find().lean();
   const { page, limit, skip, sortBy, sortOrder } = performPagination( paginationOptions );
-  const { search } = searchQuery;
+  const { search, ...filterData } = searchQuery;
   const searchFields = userSearchFields;
   const andConditions = [];
   if (search) {
@@ -38,11 +38,23 @@ export const getAllUsersService = async (paginationOptions: IPagination, searchQ
   //     ]
   //   }
   // ];
+
+  if (Object.keys(filterData).length) {
+    andConditions.push({
+      $and: Object.entries(filterData).map(([field, value]) => ({
+        [field]: value,
+      })),
+    });
+  }
+
   const sortedCondition: { [key: string ]: SortOrder} = {}
   if( sortBy && sortOrder ) {
     sortedCondition[sortBy] = sortOrder
   }
-  const result = await User.find({ $and: andConditions}).sort(sortedCondition).skip(skip).limit(limit).lean();
+  
+  const noQuery = andConditions.length > 0 ? { $and: andConditions}: {};
+
+  const result = await User.find(noQuery).sort(sortedCondition).skip(skip).limit(limit).lean();
   
   return {
     meta: {
