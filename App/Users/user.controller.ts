@@ -26,7 +26,6 @@ export const createUser: RequestHandler = asyncHandler(
       message: 'Successfully user created 🎉',
       data: { defaultPassword: result.password}
     });
-    // next();
   }
 );
 
@@ -46,12 +45,11 @@ export const getAllUsers: RequestHandler = asyncHandler(
       meta: result.meta,
       data: result.data,
     });
-    // next();
   }
 );
 
 export const getUserByUserId: RequestHandler = asyncHandler(
-  async (req, res, next) => {
+  async (req, res) => {
     const { id } = req.params;
     const result = await getUserByUserIdService(id);
     if (!result) {
@@ -62,13 +60,12 @@ export const getUserByUserId: RequestHandler = asyncHandler(
       success: true,
       data: result
     });
-    // next();
   }
 );
 
 // update userById
 export const updateUserById: RequestHandler = asyncHandler(
-  async (req, res, next) => {
+  async (req, res) => {
     const { id } = req.params;
     const data = req.body;
     const result = await updateUserService(id, data);
@@ -80,5 +77,4 @@ export const updateUserById: RequestHandler = asyncHandler(
       success: true,
       data: result
     });
-    // next();
   });

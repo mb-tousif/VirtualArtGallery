@@ -6,3 +6,18 @@ Tue Jun 13 2023 11:36:22 [VAG] error: 🐱 globalErrorHandler 💥 E11000 duplic
 Tue Jun 13 2023 11:36:59 [VAG] error: 🐱 globalErrorHandler 💥 E11000 duplicate key error collection: Virtual-Art-Gallery.arts index: artId_1 dup key: { artId: "00006" }
 Tue Jun 13 2023 11:37:43 [VAG] error: 🐱 globalErrorHandler 💥 E11000 duplicate key error collection: Virtual-Art-Gallery.arts index: artId_1 dup key: { artId: "00006" }
 Tue Jun 13 2023 11:39:40 [VAG] error: 🐱 globalErrorHandler 💥 E11000 duplicate key error collection: Virtual-Art-Gallery.arts index: artId_1 dup key: { artId: "00006" }
+Tue Jun 13 2023 13:24:45 [VAG] error: 🐱 globalErrorHandler 💥 [
+  {
+    "code": "too_big",
+    "maximum": 50,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 50 character(s)",
+    "path": [
+      "body",
+      "artDescription"
+    ]
+  }
+]
+Tue Jun 13 2023 13:33:7 [VAG] error: 🐱 globalErrorHandler 💥 E11000 duplicate key error collection: Virtual-Art-Gallery.arts index: artName_1 dup key: { artName: "Fishing in the Spring" }
