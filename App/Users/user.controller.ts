@@ -2,7 +2,7 @@ import { RequestHandler} from 'express';
 import httpStatus from 'http-status';
 import responseHandler from '../Shared/responseHandler';
 import generateDefaultPassword from '../Utilities/generatePassword';
-import generateUserId from '../Utilities/generateUserId';
+import generateUserId from './generateUserId';
 import ServerAPIError from '../ErrorHandling/ErrorExtendedClass';
 import asyncHandler from '../Shared/asyncHandler';
 import generalDataQuery from '../Shared/generalDataQuery';

@@ -1,0 +1,8 @@
+Tue Jun 13 2023 11:15:6 [VAG] error: 🐱 globalErrorHandler 💥 No users found
+Tue Jun 13 2023 11:23:48 [VAG] error: 🐱 globalErrorHandler 💥 art validation failed: artAward: Duplicate art awards are not allowed., artAward.1: `Artistic Achievement Award` is not a valid enum value for path `artAward.1`.
+Tue Jun 13 2023 11:25:5 [VAG] error: 🐱 globalErrorHandler 💥 art validation failed: artAward.1: `Artistic Achievement Award` is not a valid enum value for path `artAward.1`.
+Tue Jun 13 2023 11:28:19 [VAG] error: 🐱 globalErrorHandler 💥 E11000 duplicate key error collection: Virtual-Art-Gallery.arts index: artId_1 dup key: { artId: "00006" }
+Tue Jun 13 2023 11:36:22 [VAG] error: 🐱 globalErrorHandler 💥 E11000 duplicate key error collection: Virtual-Art-Gallery.arts index: artId_1 dup key: { artId: "00006" }
+Tue Jun 13 2023 11:36:59 [VAG] error: 🐱 globalErrorHandler 💥 E11000 duplicate key error collection: Virtual-Art-Gallery.arts index: artId_1 dup key: { artId: "00006" }
+Tue Jun 13 2023 11:37:43 [VAG] error: 🐱 globalErrorHandler 💥 E11000 duplicate key error collection: Virtual-Art-Gallery.arts index: artId_1 dup key: { artId: "00006" }
+Tue Jun 13 2023 11:39:40 [VAG] error: 🐱 globalErrorHandler 💥 E11000 duplicate key error collection: Virtual-Art-Gallery.arts index: artId_1 dup key: { artId: "00006" }
