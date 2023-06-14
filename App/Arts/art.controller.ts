@@ -3,7 +3,7 @@ import responseHandler from "../Shared/responseHandler";
 import ServerAPIError from "../ErrorHandling/ErrorExtendedClass";
 import asyncHandler from "../Shared/asyncHandler";
 import generateArtId from "./generateArtId";
-import { createArtService, updateArtByIdService } from "./art.services";
+import { createArtService, getAllArtService, updateArtByIdService } from "./art.services";
 import { RequestHandler } from "express";
 
 export const createArt: RequestHandler = asyncHandler(
@@ -35,6 +35,21 @@ export const updateArtById: RequestHandler = asyncHandler(
             statusCode: httpStatus.OK,
             success: true,
             message: 'Successfully art updated 🎉',
+            data: result
+        });
+    }
+);
+
+export const getAllArt: RequestHandler = asyncHandler(
+    async (req, res) => {
+        const result = await getAllArtService();
+        if (!result) {
+            throw new ServerAPIError(400, 'Art data not found');
+        };
+        responseHandler(res, {
+            statusCode: httpStatus.OK,
+            success: true,
+            message: 'Successfully art found 🎉',
             data: result
         });
     }
