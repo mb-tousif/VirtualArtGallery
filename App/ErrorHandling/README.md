@@ -5,12 +5,15 @@
 
 ## SYNCHRONOUS ERROR HANDLING BY EXPRESS
 <p>Express Application এ synchronous & asynchronous দুই ধরনের কোডের জন্য আলাদাভাবে এরর handle করতে পারি । কিন্তু মজার ব্যাপার হল Synchronous কোডের জন্য Express ডিফল্ট ভাবেই আমাদের জন্য এরর টা হ্যান্ডেল করে দেয়। যেমনঃ</p>
+
 ```
 app.get('/',(req,res)=>{
 throw new Error(' Thamun! Ami Synchronous Error')
 })
 ```
+
 <p>এক্ষেত্রে আমাদের সার্ভার ক্র্যাশ করবে না এবং ইউজার রেস্পন্স পাবে পাবে।তবে রেস্পন্স হিসেবে ইউজার একটি HTML Error Tempalete পাবে নিচের মতঃ</p>
+
 ```
 <body>
 <pre>Error:  Thamun! Ami Synchronous Error<br>    at F:\\ACC\\myMVC\\mvc\\index.js:13:11<br>    at Layer.handle [as handle_request] ……..</pre>
@@ -53,6 +56,7 @@ export default ApiError
 ### এই ক্লাসের মধ্যে আমরা প্রধানত দুইটি জিনিস দেখতে পাই:
 
 > statusCode: এটি এররের স্ট্যাটাস কোড সংরক্ষণ করে।
+
 > constructor(): এটি ক্লাসের কনস্ট্রাক্টর মেথড। এটি এররের স্ট্যাটাস কোড, মেসেজ এবং স্ট্যাক (যদি থাকে) গ্রহণ করে। যদি স্ট্যাক না থাকে, তবে Error.captureStackTrace() ব্যবহার করে এটি সেট করে দেয়।
 
 <p>এই কোড দ্বারা আমরা একটি কাস্টম এরর class ব্যাবহার করে সহজেই Status Code এবং Error Message দুইটি Parameter নিয়ে Client Side এ একটি এরর throw করতে পারি।</p>
