@@ -2,11 +2,11 @@ import express from "express";
 import cors from "cors";
 import httpStatus from 'http-status';
 import dotenv from "dotenv";
-import ConnectDB from "./Utilities/server";
-import router from "./Routes/index";
-import config from "./Config/index";
-import { infoLogger } from "./Shared/Logger";
-import globalErrorHandler from "./middleware/globalErrorHandling";
+import ConnectDB from "./App/Utilities/server";
+import router from "./App/Routes";
+import { infoLogger } from "./App/Shared/Logger";
+import Config from "./App/Config";
+import globalErrorHandler from "./App/middleware/globalErrorHandling";
 
 dotenv.config();
 const app = express();
@@ -24,8 +24,8 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1", router);
 
-app.listen(config.port, () => {
-  infoLogger.info(`Server running on port: ${config.port} 🚀`);
+app.listen(Config.port, () => {
+  infoLogger.info(`Server running on port: ${Config.port} 🚀`);
 });
 
 app.use(globalErrorHandler);
