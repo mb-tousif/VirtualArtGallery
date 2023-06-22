@@ -1,5 +1,8 @@
 import { Schema, model } from "mongoose";
 import { TUser } from "./user.interfaces";
+import bcrypt from "bcrypt";
+import Config from "../Config";
+import mongoose from "mongoose";
 
 const userSchema = new Schema<TUser>(
   {
@@ -59,9 +62,16 @@ const userSchema = new Schema<TUser>(
   }
 );
 
-// userSchema.statics.generateUserId = function (): string {
-//   let idEndpoint = 0;
-//   return `User2023.0${idEndpoint++}`;
-// };
+userSchema.pre<TUser>("save", async function (next) {
+  const password = this.password;
+  const hashedPassword = bcrypt.hashSync(password, Number(Config.saltRounds));
+  this.password = hashedPassword;
+  next();
+});
+
+userSchema.methods.comparePassword = function (password: string | Buffer, hash: string) {
+  const isPasswordValid = bcrypt.compareSync(password, hash);
+  return isPasswordValid;
+};
 
 export const User = model<TUser>("user", userSchema);

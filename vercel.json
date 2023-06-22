@@ -2,9 +2,9 @@
     "version": 2,
     "name": "virtual art gallery back-end",
     "builds": [
-       { "src": "./src/index.ts", "use": "@vercel/node" }
+       { "src": "dist/index.ts", "use": "@vercel/node" }
     ],
     "routes": [
-       { "src": "/src(.*)", "dest": "/index.ts" }
+       { "src": "/(.*)", "dest": "dist/index.js" }
     ]
  }
