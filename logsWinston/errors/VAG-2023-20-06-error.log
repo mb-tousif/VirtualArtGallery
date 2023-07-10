@@ -1,2 +1,0 @@
-Tue Jun 20 2023 9:54:28 [VAG] error: 🐱 globalErrorHandler 💥 E11000 duplicate key error collection: Virtual-Art-Gallery.users index: email_1 dup key: { email: "VAG.Test2@gmail.com" }
-Tue Jun 20 2023 9:56:29 [VAG] error: 🐱 globalErrorHandler 💥 $and/$or/$nor must be a nonempty array

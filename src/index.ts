@@ -2,10 +2,10 @@ import express from "express";
 import cors from "cors";
 import httpStatus from 'http-status';
 import dotenv from "dotenv";
-import ConnectDB from "./App/Utilities/server";
+import ConnectDB from "./Utilities/server";
 import router from "./App/Routes";
-import { infoLogger } from "./App/Shared/Logger";
-import Config from "./App/Config";
+import { infoLogger } from "./Shared/Logger";
+import Config from "./Config";
 import globalErrorHandler from "./App/middleware/globalErrorHandling";
 
 dotenv.config();

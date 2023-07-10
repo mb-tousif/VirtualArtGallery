@@ -1,6 +1,6 @@
 import express from "express";
 import { createArt, getAllArt, updateArtById } from "./art.controller";
-import zodValidateRequest from "../middleware/zodValidateReq";
+import zodValidateRequest from "../../middleware/zodValidateReq";
 import createArtZodSchema from "./art.zod.validation";
 const router = express.Router();
 

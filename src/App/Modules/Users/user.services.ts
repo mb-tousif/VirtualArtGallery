@@ -1,9 +1,9 @@
 import { TSearchedUser, TUser } from "./user.interfaces";
 import { User } from "./user.model";
-import { performPagination } from "../Helper/performPagination";
-import { IPagination, IQueryResponse } from '../Utilities/globalInterfaces';
+import { performPagination } from "../../../Helper/performPagination";
+import { IPagination, IQueryResponse } from '../../../Utilities/globalInterfaces';
 import { SortOrder } from "mongoose";
-import { userSearchFields } from "../Constants/pagination";
+import { userSearchFields } from "../../../Constants/pagination";
 
 export const createUserService = async (userInfo: TUser) => {
   const result = await User.create(userInfo);

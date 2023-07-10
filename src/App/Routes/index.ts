@@ -1,7 +1,7 @@
 import express from 'express';
-import { artistRoutes } from '../Artists/artist.routes';
-import { userRoutes } from '../Users/user.routes';
-import { artRoutes } from '../Arts/art.routes';
+import { artistRoutes } from '../Modules/Artists/artist.routes';
+import { userRoutes } from '../Modules/Users/user.routes';
+import { artRoutes } from '../Modules/Arts/art.routes';
 const router = express.Router();
 
 const moduleRoutes = [

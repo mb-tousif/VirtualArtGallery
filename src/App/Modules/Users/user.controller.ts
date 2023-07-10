@@ -1,12 +1,12 @@
 import { RequestHandler} from 'express';
 import httpStatus from 'http-status';
-import responseHandler from '../Shared/responseHandler';
-import generateDefaultPassword from '../Utilities/generatePassword';
+import responseHandler from '../../../Shared/responseHandler';
+import generateDefaultPassword from '../../../Utilities/generatePassword';
 import generateUserId from './generateUserId';
-import ServerAPIError from '../ErrorHandling/ErrorExtendedClass';
-import asyncHandler from '../Shared/asyncHandler';
-import generalDataQuery from '../Shared/generalDataQuery';
-import { paginationFields, userSearchQueryFields } from '../Constants/pagination';
+import ServerAPIError from '../../../ErrorHandling/ErrorExtendedClass';
+import asyncHandler from '../../../Shared/asyncHandler';
+import generalDataQuery from '../../../Shared/generalDataQuery';
+import { paginationFields, userSearchQueryFields } from '../../../Constants/pagination';
 import { createUserService, getAllUsersService, getUserByUserIdService, updateUserService } from './user.services';
 
 export const createUser: RequestHandler = asyncHandler(

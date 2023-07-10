@@ -1,6 +1,6 @@
 import { RequestHandler } from "express";
 import { updateUserToArtist } from "./artist.services";
-import asyncHandler from '../Shared/asyncHandler';
+import asyncHandler from '../../../Shared/asyncHandler';
 
 export const updateToArtist: RequestHandler = asyncHandler(async (req, res) => {
     const payload = req.body.userId;

@@ -1,7 +1,7 @@
 import httpStatus from "http-status";
-import responseHandler from "../Shared/responseHandler";
-import ServerAPIError from "../ErrorHandling/ErrorExtendedClass";
-import asyncHandler from "../Shared/asyncHandler";
+import responseHandler from "../../../Shared/responseHandler";
+import ServerAPIError from "../../../ErrorHandling/ErrorExtendedClass";
+import asyncHandler from "../../../Shared/asyncHandler";
 import generateArtId from "./generateArtId";
 import { createArtService, getAllArtService, updateArtByIdService } from "./art.services";
 import { RequestHandler } from "express";

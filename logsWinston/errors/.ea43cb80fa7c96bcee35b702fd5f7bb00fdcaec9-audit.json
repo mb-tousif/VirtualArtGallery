@@ -6,24 +6,9 @@
     "auditLog": "D:\\Let's Code\\Next Level\\Classes\\VirtualArtGallery\\logsWinston\\errors\\.ea43cb80fa7c96bcee35b702fd5f7bb00fdcaec9-audit.json",
     "files": [
         {
-            "date": 1687110312757,
-            "name": "D:\\Let's Code\\Next Level\\Classes\\VirtualArtGallery\\logsWinston\\errors\\VAG-2023-18-06-error.log",
-            "hash": "615df6d8c51f81e6955627459726cca0005f7cd4df49e793000ead6b68fa459e"
-        },
-        {
-            "date": 1687233178814,
-            "name": "D:\\Let's Code\\Next Level\\Classes\\VirtualArtGallery\\logsWinston\\errors\\VAG-2023-20-06-error.log",
-            "hash": "6c5e904c5a60c3e9af25448c5976aeb4fe0b0366402952818ff99614befb57de"
-        },
-        {
-            "date": 1687355433711,
-            "name": "D:\\Let's Code\\Next Level\\Classes\\VirtualArtGallery\\logsWinston\\errors\\VAG-2023-21-06-error.log",
-            "hash": "8cd71d5984149eb0f0435d52b353facbbb005ed48bf11fc76810d56747e6625f"
-        },
-        {
-            "date": 1687405191861,
-            "name": "D:\\Let's Code\\Next Level\\Classes\\VirtualArtGallery\\logsWinston\\errors\\VAG-2023-22-06-error.log",
-            "hash": "000d97efd947a6a51dcf1c7fa313e75f0c5febe6462135c1e136ed0dbeac958f"
+            "date": 1689011390872,
+            "name": "D:\\Let's Code\\Next Level\\Classes\\VirtualArtGallery\\logsWinston\\errors\\VAG-2023-10-07-error.log",
+            "hash": "07fa04e75055cc55e3fb74c1d92606a983d7833b34d85b246a8b4d797a63848e"
         }
     ],
     "hashType": "sha256"
